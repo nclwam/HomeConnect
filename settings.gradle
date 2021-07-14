@@ -1,0 +1,2 @@
+rootProject.name = "HomeConnect"
+include ':app'

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAcc"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/peach">
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/homepage4"
+        android:layout_marginStart="290dp"
+        android:layout_marginLeft="290dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HomeCare"
+            android:textSize="50sp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/text2"
+            android:textColor="@color/blackish"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:textSize="50sp"
+            android:textColor="@color/blackish"
+            android:layout_marginStart="190dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="190dp" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginStart="30dp"
+    android:layout_marginLeft="30dp">
+
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="FirstName"
+       android:textColor="@color/grey"
+       android:layout_marginTop="180dp"
+       android:id="@+id/P1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LastName"
+        android:textColor="@color/grey"
+        android:layout_marginTop="20dp"
+        android:id="@+id/P2"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/grey"
+        android:id="@+id/P3"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:layout_marginTop="28dp"
+
+        android:textColor="@color/grey"
+        android:id="@+id/P4"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColor="@color/blackish"
+        android:layout_marginTop="30dp"
+        android:id="@+id/P5"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:backgroundTint="@color/grey"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="150dp"
+        android:onClick="CreateAccount"
+        android:id="@+id/Button1"/>
+</LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+
+
