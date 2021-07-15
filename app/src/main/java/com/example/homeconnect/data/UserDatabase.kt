@@ -11,12 +11,10 @@ import com.example.homeconnect.Househelp.HousehelpDao
 import com.example.homeconnect.Plumbers.Plumber
 import com.example.homeconnect.Plumbers.PlumberDao
 
-@Database(entities = [User::class,Househelp::class,Electrician::class,Plumber::class], version = 3, exportSchema = false)
+@Database(entities = [User::class], version = 3, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun UserDao():UserDao
-    abstract fun HousehelpDao():HousehelpDao
-    abstract fun ElectricianDao():ElectricianDao
-    abstract fun PlumberDao():PlumberDao
+
 
     companion object {
         @Volatile
@@ -33,7 +31,7 @@ abstract class UserDatabase: RoomDatabase() {
                     context.applicationContext,
                     UserDatabase::class.java,
                     "user_database"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
 
                 return instance

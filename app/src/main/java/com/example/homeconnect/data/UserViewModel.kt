@@ -9,20 +9,16 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel (application: Application): AndroidViewModel(application) {
-
-    val readAllData :LiveData<List<User>>
+    val readAllData: LiveData<List<User>>
 
     private val repository: UserRepository
 
-    private val readObservables = MediatorLiveData<User>()
-
     init {
-        val UserDao = UserDatabase.getDatabase(application).UserDao()
-        repository = UserRepository(UserDao)
+        val userDao = UserDatabase.getDatabase(application).UserDao()
+        repository = UserRepository(userDao)
         readAllData = repository.readAllData
+
     }
-
-
 
     fun addUser(user: User) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -30,16 +26,7 @@ class UserViewModel (application: Application): AndroidViewModel(application) {
             repository.addUser(user)
         }
     }
-    //fun observeuser(): LiveData<User> {
-       // return repository.fetchUser()
 
-    }
-    //fun readUser():LiveData<User> {
-      //  return readObservables
-  //  }
-   //fun getUserProfile(): LiveData<User>{
-    //   return repository.readUser()
-   //}
+}
 
 
-   // }

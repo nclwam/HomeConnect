@@ -10,23 +10,23 @@ import kotlinx.coroutines.launch
 
 class ElectricianViewModel (application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Electrician>>
-    private val repository: ElectricianRepository
+//    private val readAllData: LiveData<List<Electrician>>
+//    private val repository: ElectricianRepository
 
     init {
-        val userDao = UserDatabase.getDatabase(application).ElectricianDao()
-        repository = ElectricianRepository(userDao)
-        readAllData = repository.readAllData
+//        val userDao = UserDatabase.getDatabase(application)
+//        repository = ElectricianRepository(userDao)
+//        readAllData = repository.readAllData
 
     }
 
     fun addElectrician(user: Electrician) {
-        viewModelScope.launch(Dispatchers.IO) {
-            //this coroutine will run the function in a background thread
-            repository.addElectrician(user)
+//        viewModelScope.launch(Dispatchers.IO) {
+//            //this coroutine will run the function in a background thread
+//            repository.addElectrician(user)
         }
     }
-}
+
 
 
 

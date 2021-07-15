@@ -20,9 +20,9 @@ class CreateAcc : AppCompatActivity() {
 
         mUserViewModel= ViewModelProvider(this).get(UserViewModel::class.java)
 
-        Button1.setOnClickListener() {
-           Insertdata()
-}
+//        Button1.setOnClickListener() {
+//           Insertdata()
+//}
 
     }
     private fun Insertdata() {
@@ -31,16 +31,17 @@ class CreateAcc : AppCompatActivity() {
         val Email = P3.text.toString()
         val PhoneNumber = P4.text.toString()
         val Password = P5.text.toString()
-        val user=User(0,FirstName,LastName,Email,PhoneNumber = 0,Password)
+        val user=User(0,FirstName,LastName,Email,PhoneNumber,Password)
 
         mUserViewModel.addUser(user)
         Toast.makeText(this,"Registration Successfull", Toast.LENGTH_SHORT).show()
+
+        startActivity(Intent(this, ListUserActivity::class.java))
 
     }
 
     fun CreateAccount(view: View) {
         Insertdata()
-        //startActivity(Intent(this@CreateAcc,MainActivity::class.java))
     }
 
 

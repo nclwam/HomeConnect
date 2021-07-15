@@ -10,20 +10,20 @@ import kotlinx.coroutines.launch
 
 class PlumberViewModel (application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Plumber>>
-    private val repository: PlumberRepository
+//    private val readAllData: LiveData<List<Plumber>>
+//    private val repository: PlumberRepository
 
     init {
-        val userDao = UserDatabase.getDatabase(application).PlumberDao()
-        repository = PlumberRepository(userDao)
-        readAllData = repository.readAllData
+//       serDao = UserDatabase.getDatabase(application).PlumberDao()
+//        repository = PlumberRepository()
+        //readAllData = repository.readAllData
 
     }
 
     fun addPlumber(user: Plumber) {
         viewModelScope.launch(Dispatchers.IO) {
             //this coroutine will run the function in a background thread
-            repository.addPlumber(user)
+           // repository.addPlumber(user)
         }
     }
 }
