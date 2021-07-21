@@ -88,6 +88,29 @@
         android:textColor="@color/blackish"
         android:layout_marginTop="30dp"
         android:id="@+id/P5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My occupation is:"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/workerviewgroup"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer"
+            android:layout_marginRight="60dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"/>
+    </RadioGroup>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,6 +121,8 @@
         android:layout_marginLeft="150dp"
         android:onClick="CreateAccount"
         android:id="@+id/Button1"/>
+
+
 </LinearLayout>
 
 

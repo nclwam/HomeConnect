@@ -1,8 +1,10 @@
 package com.example.homeconnect
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
+import android.view.View
 import android.widget.Toast
 import com.example.homeconnect.data.User
 import com.example.homeconnect.data.UserDao
@@ -33,12 +35,23 @@ class LoginActivity : AppCompatActivity() {
                 val user : User = userdao.loginuser(Email , Password)
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
 
+                if (user.user_type.equals(1)){
+                    startActivity(Intent(this, RegisterWorkersActivity::class.java))
+                }else{
+                    startActivity(Intent(this, HomePage::class.java))
+
+                }
+
                 //execute looper
                 Looper.loop();
             }.start()
         }
 
 
+    }
+
+    fun homepage(view: View) {
+        startActivity(Intent(this@LoginActivity,HomePage::class.java))
     }
 }
 

@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeConnect">
-        <activity android:name=".HomePage"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".HousehelpInfo" />
-        <activity android:name=".SplashPage" />
-        <activity android:name=".CreateAcc">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ListUserActivity"/>
+        <activity android:name=".SplashPage">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
         </activity>
-        <activity android:name=".ListUserActivity" />
+    <activity android:name=".RegisterWorkersActivity"/>
+        <activity android:name=".CreateAcc"/>
+        <activity android:name=".HomePage"/>
         <activity android:name=".MainActivity" />
     </application>
 

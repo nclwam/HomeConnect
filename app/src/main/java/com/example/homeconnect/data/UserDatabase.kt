@@ -11,7 +11,7 @@ import com.example.homeconnect.Househelp.HousehelpDao
 import com.example.homeconnect.Plumbers.Plumber
 import com.example.homeconnect.Plumbers.PlumberDao
 
-@Database(entities = [User::class], version = 3, exportSchema = false)
+@Database(entities = [User::class], version = 4, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun UserDao():UserDao
 

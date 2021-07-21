@@ -7,16 +7,33 @@
     tools:context=".LoginActivity"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:gravity="center">
-    <EditText
+
+    android:background="@color/peach">
+    <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your email"
+        android:textSize="20dp"
+        android:layout_marginTop="190dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
         android:textColor="@color/grey"
+        android:layout_marginTop="15dp"
         android:id="@+id/emailid"/>
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Enter password"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:hint="Password"
         android:textColor="@color/grey"
         android:id="@+id/passid"/>
@@ -25,6 +42,9 @@
         android:layout_height="wrap_content"
         android:text="LOG IN"
         android:backgroundTint="@color/grey"
-        android:id="@+id/loginbuttonid"/>
+        android:id="@+id/loginbuttonid"
+        android:onClick="homepage"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="300dp"/>
 
 </LinearLayout>
