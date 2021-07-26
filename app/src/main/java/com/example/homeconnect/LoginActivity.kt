@@ -1,20 +1,41 @@
-package com.example.homeconnect
+ package com.example.homeconnect
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
 import com.example.homeconnect.data.User
 import com.example.homeconnect.data.UserDao
 import com.example.homeconnect.data.UserDatabase
+import kotlinx.android.synthetic.main.activity_create_acc.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+//        instantiate the preference class
+        val SharedPreference: SharedPreference = SharedPreference()
+
+//        declared shared prefernce
+        val preference = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext())
+
+        val name = preference.getString(SharedPreference.FirstName, "")
+        Toast.makeText(this, "WELCOME " + name, Toast.LENGTH_SHORT).show()
+
+//        showing in a textview
+        loginperson.setText("WELCOME " + name)
+
+
+        startActivity(Intent(this, HomePage::class.java))
+
+
+
+
 
         loginbuttonid.setOnClickListener {
             //when the login button is clicked I will perform the following tasks
@@ -24,36 +45,40 @@ class LoginActivity : AppCompatActivity() {
 
             val thread: Thread
             //instantiate the database
-            val  database_user : UserDatabase =  UserDatabase.getDatabase(this)
+            val database_user: UserDatabase = UserDatabase.getDatabase(this)
 
             //go to the database and accessing the dao
-            val userdao : UserDao = database_user.UserDao()
+            val userdao: UserDao = database_user.UserDao()
 
-            Thread{
+            Thread {
                 //prepare your query to execute in the background
                 Looper.prepare()
-                val user : User = userdao.loginuser(Email , Password)
+                val user: User = userdao.loginuser(Email, Password)
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-
-                if (user.user_type.equals(1)){
-                    startActivity(Intent(this, RegisterWorkersActivity::class.java))
-                }else{
-                    startActivity(Intent(this, HomePage::class.java))
-
-                }
-
-                //execute looper
-                Looper.loop();
-            }.start()
+            }
         }
-
-
-    }
-
-    fun homepage(view: View) {
-        startActivity(Intent(this@LoginActivity,HomePage::class.java))
     }
 }
+
+//                if (user.user_type.equals(1)){
+//                    startActivity(Intent(this, RegisterWorkersActivity::class.java))
+//                }else{
+//                    startActivity(Intent(this, HomePage::class.java))
+//
+//                }
+//
+//                execute looper
+//                Looper.loop();
+//            }.start()
+//        }
+//
+
+//    }
+
+//    fun homepage(view: View) {
+//        startActivity(Intent(this@LoginActivity,HomePage::class.java))
+//    }
+//}
 
 //        login_btn.setOnClickListener {
 //
