@@ -4,12 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.homeconnect.Electrician.Electrician
-import com.example.homeconnect.Electrician.ElectricianDao
 import com.example.homeconnect.Househelp.Househelp
 import com.example.homeconnect.Househelp.HousehelpDao
-import com.example.homeconnect.Plumbers.Plumber
-import com.example.homeconnect.Plumbers.PlumberDao
 
 @Database(entities = [User::class], version = 4, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {

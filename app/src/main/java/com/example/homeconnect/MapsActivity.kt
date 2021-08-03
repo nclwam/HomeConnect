@@ -1,5 +1,7 @@
 package com.example.homeconnect
 
+import android.location.Address
+import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -12,6 +14,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.homeconnect.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.model.Marker
+import java.net.Inet4Address
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -24,9 +27,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //    a string location
     var longitude= -73.99
     var latitude = 48.73
-
-//    new pin
-    private lateinit var markerName: Marker
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,10 +42,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 //        setonlick listerner
         binding.mapbutton.setOnClickListener{
-            markerName.remove()
+
 
             var location :String = binding.textmap.text.toString()//get user input
             Toast.makeText(this,"You clicked:" +location, Toast.LENGTH_SHORT).show()
+            var convertedLatLng: String=getLocationFromAddress(location)
+
+//            "1.3456,1.7890"
+            var splittablecoordinate = convertedLatLng.split(",").toTypedArray()
+//            store the lat and longitude
+            latitude= splittablecoordinate[0].toDouble()
+            longitude= splittablecoordinate[1].toDouble()
+
+
+                MyPlace=LatLng(latitude,longitude)
+
+//            place new marker
+           val markerName: Marker=mMap.addMarker(MarkerOptions().position(MyPlace).title("Here"))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MyPlace, 18f))
         }
     }
 
@@ -58,6 +72,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
@@ -65,5 +80,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(MyPlace).title("Here"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MyPlace, 18f))
+    }
+    fun getLocationFromAddress(strAddress: String): String{
+        val coder = Geocoder(this)
+//        empty list with address
+        val addresses: List<Address>?
+
+        return try{
+//    convert the string to a latitude and a longitude
+            addresses= coder.getFromLocationName(strAddress,1)
+
+//         if nothing was found
+if(addresses==null){
+    return "0,0"
+
+}
+            val address= addresses[0]
+            val lat = address.latitude
+            val lng = address.longitude
+            val location: String="$lat,$lng"
+            return location
+        } catch (e:Exception){
+            "0,0"
+        }
     }
 }

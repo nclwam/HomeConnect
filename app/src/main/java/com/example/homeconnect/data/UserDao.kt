@@ -18,8 +18,8 @@ interface UserDao {
     //select all the records in the database that has the firstname and password that the user has given
     fun loginuser(Email:String , Password: String):User
 
-//    @Query("SELECT * FROM users_table LIMIT 1")
-//    fun readUser(): LiveData<User>
+   @Query("DELETE FROM users_table WHERE id LIKE :id")
+   fun delete(id:Int) :Int
 //
 //    @Query("SELECT *FROM users_table LIMIT 1")
 //    fun getdata ():LiveData<User>

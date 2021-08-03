@@ -50,7 +50,6 @@
         android:text="LOG IN"
         android:backgroundTint="@color/grey"
         android:id="@+id/loginbuttonid"
-        android:onClick="homepage"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="300dp"/>
 

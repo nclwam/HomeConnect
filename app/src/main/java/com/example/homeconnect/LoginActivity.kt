@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_create_acc.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+    var user_type: Int =1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -42,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
             // 1 fatma ali 23
             val Email = emailid.text.toString()
             val Password = passid.text.toString()
+            Toast.makeText(this, "you clicked me", Toast.LENGTH_SHORT).show()
 
             val thread: Thread
             //instantiate the database
@@ -54,7 +56,21 @@ class LoginActivity : AppCompatActivity() {
                 //prepare your query to execute in the background
                 Looper.prepare()
                 val user: User = userdao.loginuser(Email, Password)
-                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+
+               user_type = user.user_type
+
+
+            }.start()
+
+
+
+
+            if(user_type.equals(4)){
+                Toast.makeText(this, "this is an admin", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, RegisterWorkersActivity::class.java))
+            }else{
+                Toast.makeText(this, "this is a normal user", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, HomePage::class.java))
             }
         }
     }

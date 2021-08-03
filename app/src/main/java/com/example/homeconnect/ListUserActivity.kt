@@ -2,13 +2,10 @@ package com.example.homeconnect
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListAdapter
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.homeconnect.data.UserViewModel
-import com.example.homeconnect.ui.UserRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_list_user.*
 
 class ListUserActivity : AppCompatActivity() {
