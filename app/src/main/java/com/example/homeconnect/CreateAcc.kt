@@ -82,7 +82,7 @@ class CreateAcc : AppCompatActivity() {
 
         mUserViewModel.addUser(user)
         Toast.makeText(this,"Registration Successfull" +user_type, Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this,LoginActivity::class.java))
+        startActivity(Intent(this,ListUserActivity::class.java))
 
 
 

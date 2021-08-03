@@ -26,7 +26,7 @@ class ListUserActivity : AppCompatActivity() {
         //users viewmodel
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         mUserViewModel.readAllData.observe( this, Observer {  user ->
-            adapter.setData(user)
+            adapter.setData(user,this)
         })
 
     }
