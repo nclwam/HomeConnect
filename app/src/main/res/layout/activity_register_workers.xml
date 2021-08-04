@@ -4,6 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterWorkersActivity">
+    tools:context=".RegisterWorkersActivity"
+    android:orientation="vertical"
+    android:background="@color/peach">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:id="@+id/welcomeadmin"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed to fill HouseHelp Information"
+        android:textColor="@color/grey"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter First Name"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="FirstName"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Last Name"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LastName"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter ID NO."
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="39dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Identity Number"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Phone Number"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="35dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="290dp"
+            android:backgroundTint="@color/grey"
+            android:text="NEXT"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/nextarrow"
+            app:iconGravity="end"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+

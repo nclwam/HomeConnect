@@ -18,16 +18,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/grey"
-        android:textSize="25dp"
-        android:text="Welcome"
-        android:id="@+id/info2"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:text="Go ahead and click the category you want..."
+        android:layout_marginTop="20dp"/>
+
+
+    <Button
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/grey"
-        android:textSize="25dp"
-        android:text="Welcome"
-        android:id="@+id/info3"/>
+        android:text="GET HOUSEHELP"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:backgroundTint="@color/grey"
+        android:onClick="gethousehelp"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="REGISTER HOUSEHELP"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:backgroundTint="@color/grey"
+        android:onClick="registerhh"/>
 
 
 </LinearLayout>
+
