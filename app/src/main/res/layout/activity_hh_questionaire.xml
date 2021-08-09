@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HhQuestionaire"
+    android:background="@color/peach"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kindly answer the following questions..."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1) How many years/months of experience have you worked for?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-20dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More than an year"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less than an year"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="2) Do you have any health issue?"
+             android:textSize="15dp"
+             android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-10dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If so state the name? "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="italic"
+            android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3) Do you have a family?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2) Have you ever worked with children before?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4) How much was your previous payment?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Answer"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5) Reasons why you quit?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I got fired "
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low payment wage"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-20dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decided to quit "
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="other"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6) What is your highest  level of Education?"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed Highschool/University"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did not complete School"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7) Do you speak "
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+
+
+
+</LinearLayout>

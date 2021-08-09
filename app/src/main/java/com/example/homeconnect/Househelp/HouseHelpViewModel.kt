@@ -9,21 +9,22 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class HouseHelpViewModel (application: Application): AndroidViewModel(application) {
-//
-//    private val readAllData: LiveData<List<Househelp>>
-//    private val repository: HousehelpRepository
+
+   private val readAllData: LiveData<List<Househelp>>
+   private val repository: HousehelpRepository
 
     init {
-//        val userDao = UserDatabase.getDatabase(application).HousehelpDao()
-//        repository = HousehelpRepository(userDao)
-//        readAllData = repository.readAllData
+       val userDao = UserDatabase.getDatabase(application).HousehelpDao()
+       repository = HousehelpRepository(userDao)
+      readAllData = repository.readAllData
 
     }
 
     fun addHousehelp(user: Househelp) {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            //this coroutine will run the function in a background thread
-//            repository.addHousehelp(user)
+        viewModelScope.launch(Dispatchers.IO) {
+            //this coroutine will run the function in a background thread
+            repository.addHousehelp(user)
         }
     }
+}
 

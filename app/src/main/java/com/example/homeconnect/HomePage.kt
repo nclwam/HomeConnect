@@ -15,25 +15,10 @@ class HomePage : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
 
 
-//        instantiate the preference class
-        val SharedPreference: SharedPreference = SharedPreference()
-
-//        declared shared prefernce
-        val preference = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext())
-
-        val name =preference.getString(SharedPreference.FirstName,"")
-        val lname =preference.getString(SharedPreference.LastName,"")
-        val email =preference.getString(SharedPreference.email,"")
-
-        Toast.makeText(this,"WELCOME " +name, Toast.LENGTH_SHORT).show()
-
-//        showing in a textview
-        info.setText("WELCOME " +name)
-
     }
 
     fun gethousehelp(view: View) {
-        startActivity(Intent(this,DisplayHousehelp::class.java))
+        startActivity(Intent(this,MapsActivity::class.java))
 
     }
     fun registerhh(view: View) {

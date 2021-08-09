@@ -7,9 +7,10 @@ import androidx.room.RoomDatabase
 import com.example.homeconnect.Househelp.Househelp
 import com.example.homeconnect.Househelp.HousehelpDao
 
-@Database(entities = [User::class], version = 6, exportSchema = false)
+@Database(entities = [User::class, Househelp::class], version = 8, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
     abstract fun UserDao():UserDao
+    abstract fun HousehelpDao():HousehelpDao
 
 
     companion object {

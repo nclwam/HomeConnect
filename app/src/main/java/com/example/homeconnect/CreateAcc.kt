@@ -66,11 +66,11 @@ class CreateAcc : AppCompatActivity() {
 
 
         Button1.setOnClickListener() {
-           Insertdata()
+           InsertData()
 }
 
     }
-    private fun Insertdata() {
+    private fun InsertData() {
         val FirstName = P1.text.toString()
         val user_type = user_type
         val LastName = P2.text.toString()
@@ -81,15 +81,15 @@ class CreateAcc : AppCompatActivity() {
         val user=User(0,user_type,FirstName,LastName,Email,PhoneNumber,Password)
 
         mUserViewModel.addUser(user)
-        Toast.makeText(this,"Registration Successfull" +user_type, Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this,ListUserActivity::class.java))
+        Toast.makeText(this,"Registration Successful" +user_type, Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, LoginActivity::class.java))
 
 
 
     }
 
     fun CreateAccount(view: View) {
-        Insertdata()
+        InsertData()
     }
 
 

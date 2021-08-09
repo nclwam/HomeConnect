@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey
     val id: Int,
     val FirstName: String,
     val LastName: String,
-    val Phonenumber: Int,
-    val identitynumber: Int,
+    val Phonenumber: String,
+    val identitynumber: String,
 )
 

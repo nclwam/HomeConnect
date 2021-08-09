@@ -32,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
         loginperson.setText("WELCOME " + name)
 
 
-        startActivity(Intent(this, HomePage::class.java))
 
 
 
@@ -43,7 +42,6 @@ class LoginActivity : AppCompatActivity() {
             // 1 fatma ali 23
             val Email = emailid.text.toString()
             val Password = passid.text.toString()
-            Toast.makeText(this, "you clicked me", Toast.LENGTH_SHORT).show()
 
             val thread: Thread
             //instantiate the database
@@ -66,10 +64,8 @@ class LoginActivity : AppCompatActivity() {
 
 
             if(user_type.equals(4)){
-                Toast.makeText(this, "this is an admin", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, RegisterWorkersActivity::class.java))
             }else{
-                Toast.makeText(this, "this is a normal user", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, HomePage::class.java))
             }
         }

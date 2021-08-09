@@ -54,6 +54,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:hint="FirstName"
+       android:inputType="text"
        android:textColor="@color/grey"
        android:layout_marginTop="180dp"
        android:id="@+id/P1"/>
@@ -61,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="LastName"
+        android:inputType="text"
         android:textColor="@color/grey"
         android:layout_marginTop="20dp"
         android:id="@+id/P2"/>
@@ -69,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
+        android:inputType="text"
         android:layout_marginTop="25dp"
         android:textColor="@color/grey"
         android:id="@+id/P3"/>
@@ -77,7 +80,7 @@
         android:layout_height="wrap_content"
         android:hint="Phone Number"
         android:layout_marginTop="28dp"
-
+        android:inputType="text"
         android:textColor="@color/grey"
         android:id="@+id/P4"/>
 
@@ -85,6 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="@color/blackish"
         android:layout_marginTop="30dp"
         android:id="@+id/P5"/>
@@ -117,7 +121,7 @@
         android:text="Create Account"
         android:backgroundTint="@color/grey"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="150dp"
         android:onClick="CreateAccount"
         android:id="@+id/Button1"/>

@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Proceed to fill HouseHelp Information"
-        android:textColor="@color/grey"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginTop="30dp"/>
     <LinearLayout
@@ -26,62 +26,53 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter First Name"
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="40dp"/>
+            android:hint="Enter First Name"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:id="@+id/hhfname"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Enter Last Name"
+            android:inputType="text"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
+            android:id="@+id/hhlname"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Year Of Birth"
+            android:inputType="text"
+            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
+            android:id="@+id/hhyob"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="FirstName"
+            android:hint="Enter Identity Number"
             android:textColor="@color/grey"
+            android:inputType="text"
             android:layout_marginTop="20dp"
-            />
+            android:id="@+id/hhidno"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter Last Name"
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="40dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="LastName"
+            android:hint="Enter Phone number"
+            android:inputType="text"
             android:textColor="@color/grey"
             android:layout_marginTop="20dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter ID NO."
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="39dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Identity Number"
-            android:textColor="@color/grey"
-            android:layout_marginTop="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter Phone Number"
-            android:textSize="25dp"
-            android:textColor="@color/black"
-            android:layout_marginTop="35dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone Number"
-            android:textColor="@color/grey"
-            android:layout_marginTop="20dp" />
+            android:id="@+id/hhphoneno"/>
+
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +81,8 @@
             android:text="NEXT"
             style="@style/Widget.MaterialComponents.Button.Icon"
             app:icon="@drawable/nextarrow"
-            app:iconGravity="end"/>
+            app:iconGravity="end"
+            android:id="@+id/adminnext" />
 
 
     </LinearLayout>

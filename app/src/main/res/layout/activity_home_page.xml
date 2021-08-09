@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:text="GET HOUSEHELP"
         android:layout_marginTop="180dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginLeft="40dp"
         android:backgroundTint="@color/grey"
         android:onClick="gethousehelp"/>
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="REGISTER HOUSEHELP"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginLeft="40dp"
         android:backgroundTint="@color/grey"
         android:onClick="registerhh"/>

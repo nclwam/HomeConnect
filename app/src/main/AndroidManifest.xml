@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeConnect">
-        <activity android:name=".DisplayHousehelp"></activity>
+        <activity android:name=".HhQuestionaire"></activity>
+        <activity android:name=".HelpCharacter" />
+        <activity android:name=".QualificationsAct" />
+        <activity android:name=".DisplayHousehelp" />
         <activity android:name=".DisplayHouseHelp" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

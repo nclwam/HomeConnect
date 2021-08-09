@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpCharacter"
+    android:background="@color/peach"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name Profile"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kindly enter HouseHelp Character"
+        android:textSize="18dp"
+        android:textColor="@color/black"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time management skills"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friendliness"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flexibility"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abusive"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attentive to detail"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uncoperative"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perseverance"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good communication skills"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Well groomed "
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+        <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perseverant"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textColor="@color/black"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="290dp"
+            android:backgroundTint="@color/grey"
+            android:text="NEXT"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/nextarrow"
+            app:iconGravity="end" />
+
+    </LinearLayout>
+
+</LinearLayout>
